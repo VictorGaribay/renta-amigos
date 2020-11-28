@@ -1,16 +1,24 @@
 import Head from 'next/head'
-import React from 'react'
-import styles from '../styles/Home.module.css'
+import React, { useState } from 'react'
+import Button from 'src/components/base/Button'
+import ModalSchedule from 'src/components/modals/ModalSchedule'
+import { Container } from 'src/styles/globalStyled'
 
 const Home: React.FC = () => {
+  const [isOpenModal, setOpenModal] = useState(false)
+  function openModal(): void {
+    setOpenModal(prev => !prev)
+  }
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>RentaAmigos | Home</title>
       </Head>
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to</h1>
-      </main>
+      <Container>
+        <Button onClick={openModal} label="Rentar amigo" />
+        {isOpenModal && <ModalSchedule openModal={openModal} />}
+      </Container>
     </div>
   )
 }
