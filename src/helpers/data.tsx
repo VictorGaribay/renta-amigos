@@ -1,37 +1,45 @@
 export const Days = [
   {
-    id: 1,
+    id: 'lunes',
     identifier: 'Lunes'
   },
   {
-    id: 2,
+    id: 'martes',
     identifier: 'Martes'
   },
   {
-    id: 3,
+    id: 'miercoles',
     identifier: 'Miercoles'
   },
   {
-    id: 3,
+    id: 'jueves',
     identifier: 'Jueves'
   },
   {
-    id: 3,
+    id: 'viernes',
     identifier: 'Viernes'
+  },
+  {
+    id: 'sabado',
+    identifier: 'Sabado'
+  },
+  {
+    id: 'domingo',
+    identifier: 'Domingo'
   }
 ]
 
 export const Hours = [
   {
-    id: 1,
+    id: '9.00 am',
     identifier: '9.00 am'
   },
   {
-    id: 2,
+    id: '11.00 am',
     identifier: '11.00 am'
   },
   {
-    id: 3,
+    id: '3.00 pm',
     identifier: '3.00 pm'
   }
 ]

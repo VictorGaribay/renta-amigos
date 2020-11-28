@@ -2,7 +2,8 @@ import React from 'react'
 import { ButtonP } from 'src/styles/globalStyled'
 
 interface ButtonProps {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+  type?: string
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
   label: string
 }
 

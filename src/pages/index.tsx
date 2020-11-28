@@ -16,7 +16,10 @@ const Home: React.FC = () => {
         <title>RentaAmigos | Home</title>
       </Head>
       <Container>
-        <Button onClick={openModal} label="Rentar amigo" />
+        <div>
+          <Button onClick={openModal} label="Rentar amigo" />
+        </div>
+
         {isOpenModal && <ModalSchedule openModal={openModal} />}
       </Container>
     </div>

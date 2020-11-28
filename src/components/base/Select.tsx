@@ -1,20 +1,22 @@
+import { Field } from 'formik'
 import React from 'react'
 
 interface SelectProps {
+  name?: string
   label: string
-  data: { id: number; identifier: string }[]
+  data: { id: string; identifier: string }[]
 }
 
-const Select: React.FC<SelectProps> = ({ label, data }) => {
+const Select: React.FC<SelectProps> = ({ label, data, ...props }) => {
   return (
-    <select style={{ margin: '4px' }}>
+    <Field as="select" style={{ margin: '4px' }} {...props}>
       <option value="">{label}</option>
       {data.map((d, index) => (
         <option key={index} value={d.id}>
           {d.identifier}
         </option>
       ))}
-    </select>
+    </Field>
   )
 }
 

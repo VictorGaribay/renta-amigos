@@ -21,6 +21,7 @@ export const Container = styled.div`
 
 export const ButtonP = styled.button`
   min-width: 100px;
+  width: 100%;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
